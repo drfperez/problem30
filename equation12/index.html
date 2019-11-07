@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>equation12</title>
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+    <script src="p5.js"></script>
+    <script src="p5.sound.js"></script>
+    <script src="equation12.js"></script>
+  </head>
+  <body>
+
+    <p> Equation 12 from problem 30 </p>
+        <form>
+                <table class="features-table">
+                <tr>
+                <td>
+                <p> Enter g  <input id="g" type="text" size="8" value="9.81"></input></p>
+                <p> Enter v0  <input id="v0" type="text" size="8" value=""></input></p>
+                <p> Enter Ss  <input id="Ss" type="text" size="8" value=""></input></p>
+                <input id="count" type="button" value="Calculate the equation 12" onclick="equation12()"></input></br></br>
+                </td>
+                </tr>
+                <tr>
+                <td></br>
+                <a>Equation 12 result is f </a><input id="f" type="text" size="5" readonly="readonly"></input></br></br>
+                </td>
+                </tr>
+                <tr>
+                <td></br>
+                <a>Comment:  </a></br><input id="comment" type="text" size="60" readonly="readonly"></input></input></br></br>
+                </td>
+                </tr>
+                <tr>
+                <td>
+                <input type="button" value="Clear" onclick="cancel()"></input>
+                </td>
+                </tr>
+                </table>
+                </form>
+  </body>
+</html>
