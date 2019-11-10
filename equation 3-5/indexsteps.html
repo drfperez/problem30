@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>MathJax v3 dynamic equations using CSS and javascript</title>
+  <link rel="stylesheet" type="text/css" href="stepsstyle.css">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="stepsmathjax.js"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body>
+<h1>Dynamic Equations in MathJax</h1>
+<div id="frame">
+<p>
+Expand the following:
+\begin{align}
+  Fg+Fb+N=(m*a)
+    =&\cssId{Step1}{-Fb=(m*a)}\\[3px]
+    &\cssId{Step2}{0=N-Fg}\\[3px]
+    &\cssId{Step3}{a=-Fb/m}\\[3px]
+
+\end{align}
+</p>
+
+<p>
+<input type="button" onclick="ShowStep()" value="Show Next Step" id="step" />
+<input type="button" onclick="ResetSteps()" value="Reset" id="reset"
+disabled="true" />
+</p>
+
+</div>
+
+</body>
+</html>
