@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equation 7</title>
+    <link rel="stylesheet" type="text/css" href="mystyle.css"
+    <script src="p5.js"></script>
+    <script src="p5.sound.js"></script>
+    <script src="equation7.js"></script>
+  </head>
+  <body>
+    <p>The equation 7 from problem 30 is</p>
+        <form>
+                <table class="features-table">
+                <tr>
+                <td>
+                <p>Enter Fb<input id="Fb" type="number" size="8" value=""></input></p>;
+                <p>Enter m<input id="m" type="number" size="8" value=""></input></p>; 
+                <p>Enter t<input id="t" type="number" size="8" value=""></input></p>;
+                <p>Enter v0<input id="v0" type="number" size="8" value=""></input></p>;
+                <input id="count" type="button" value="Calculate equation 7" onclick="equation7()"></input></br></br>
+                </td>
+                </tr>
+                <tr>
+                <td></br>
+                <a>Equation 7 result is </a><input id="x" type="text" size="5" readonly="readonly"></input></br></br>
+                </td>
+                </tr>
+                <tr>
+                <td></br>
+                <a>Comment: </a></br><input id="comment" type="text" size="60" readonly="readonly"></input></input></br></br>
+                </td>
+                </tr>
+                <tr>
+                <td>
+                <input type="button" value="Clear" onclick="cancel()"></input>
+                </td>
+                </tr>
+                </table>
+                </form>
+  </body>
+</html>
