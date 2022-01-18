@@ -1,4 +1,2 @@
-# problem30
-hola
-adios
-<img src="images/dinosaur.jpg">
+# problema 30
+EXEMPLE PROBLEMA MATHJAX
