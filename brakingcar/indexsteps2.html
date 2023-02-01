@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<!-- Mirrored from nilmarquez.neocities.org/brakingcar/indexsteps2 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Feb 2023 06:56:45 GMT -->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>MathJax v3 dynamic equations using CSS and javascript</title>
+  <link rel="stylesheet" type="text/css" href="stepsstyle.css">
+  <script src="../../polyfill.io/v3/polyfill.min1162.js?features=es6"></script>
+  <script src="stepsmathjax.js"></script>
+  <script id="MathJax-script" async src="../../cdn.jsdelivr.net/npm/mathjax%403/es5/tex-chtml.js"></script>
+  <script type="text/javascript">
+    //
+    //  Use a closure to hide the local variable
+    //
+    (function () {
+      var n = 1;
+      //
+      //  Make the current step be visible, and increment the step.
+      //  If it is the last step, disable the step button.
+      //  Once a step is taken, the reset button is made available.
+      //
+      window.ShowStep = function () {
+        document.getElementById("Step" + n++).style.visibility = "visible";
+        if (!document.getElementById("Step" + n)) {
+          document.getElementById("step").disabled = true;
+        }
+        document.getElementById("reset").disabled = false;
+      }
+      //
+      //  Enable the step button and disable the reset button.
+      //  Hide the steps.
+      //
+      window.ResetSteps = function () {
+        document.getElementById("step").disabled = false;
+        document.getElementById("reset").disabled = true;
+        var i = 1, step; n = 1;
+        while (step = document.getElementById("Step" + i)) {
+          step.style.visibility = "hidden";
+          i++
+        }
+      }
+    })();
+    </script>
+</head>
+<body>
+<h1>From equation 3 to equation 5</h1>
+<div id="frame">
+<p>
+Expand the following:
+\begin{align}
+  a= \frac{F_b}{m}
+    =&\cssId{Step1}{v(t)=ad}\\[3px]
+    &\cssId{Step2}{v(t)= -\frac{F_b}{m}d}\\[3px]
+    &\cssId{Step3}{v(t)= -\frac{F_b}{m}t+K}\\[3px]
+    &\cssId{Step4}{v(t)= -\frac{F_b}{m}t+v_0}\\[3px]
+
+\end{align}
+<ol>
+<li>In the first step we calculate the speed equation with the acceleration and variable d</li>
+<li>In the second step we take the equation of the acceleration and we change it here</li>
+<li>In the third step we take the variable d and we change it for the variable K and the time</li>
+<li>In the fourth step we change the variable K for the initial speed</li>
+</ol>
+</p>
+
+<p>
+<input type="button" onclick="ShowStep()" value="Show Next Step" id="step" />
+<input type="button" onclick="ResetSteps()" value="Reset" id="reset"
+disabled="true" />
+</p>
+
+</div>
+
+</body>
+
+<!-- Mirrored from nilmarquez.neocities.org/brakingcar/indexsteps2 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Feb 2023 06:56:45 GMT -->
+</html>

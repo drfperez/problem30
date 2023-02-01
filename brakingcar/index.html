@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="">
+  
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Braking car problem</title>
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+    <script src="sketch.js"></script>
+    <script src="p5.js"></script>
+    <script src="p5.sound.js"></script>
+    <script src="equations.js"></script>
+  </head>
+  <body>
+      <h1>Braking car problem</h1>
+      <p>When the brake pedal of a car moving 80 km/h on a straight asphalt road is fully pressed, the car can stop in 50 m. How long will its braking distance be on an identical road which forms a 5° angle with the horizontal plane? Consider both the case when it brakes downhill and when it brakes uphill. Assume that at the time t = 0 s the coordinate is x = 0 m. The wheels do not slip. Neglect the air resistance.</p>
+      <img src="car0.png">
+      <iframe src="indexsteps.html" frameborder="0" scrolling="yes"  height="340" width="100%"></iframe>
+      <img src="problem%20car%201%20bien.png">
+      <p>Please enter the following data to calculate the previous equation</p>
+          <form>
+                  <table class="features-table">
+                  <tr>
+                  <td>
+                  <p>Enter Force breaking<input id="Fb3" type="text" size="8" value=""></input></p>
+                  <p>Enter mass<input id="m3" type="text" size="8" value=""></input></p>
+                  <input id="count3" type="button" value="Calculate equation 3" onclick="equation3()"></input></br></br>
+                  </td>
+                  </tr>
+                  <tr>
+                  <td></br>
+                  <a>Equation 3 result is </a><input id="a" type="text" size="5" readonly="readonly"></input></br></br>
+                  </td>
+                  </tr>
+                  <tr>
+                  <td></br>
+                    <a>Comment: </a></br><input id="comment3" type="text" size="60" readonly="readonly"></input></input></br></br>
+                  </tr>
+                  <tr>
+                  </td>
+                  <td>
+                    <iframe src="indexsteps2.html" frameborder="0" scrolling="yes"  height="440" width="100%"></iframe>
+                    <p> Enter initial speed<input id="v05" type="text" size="8" value=""></imput></p>
+                    <p> Enter time<input id="t5" type="text"size="8" value="1"></input></p>
+                    <p>Enter Force breaking<input id="Fb5" type="text" size="8" value=""></input></p>
+                    <p>Enter mass<input id="m5" type="text" size="8" value=""></input></p>
+                    <input id="count5" type="button" value="Calculate equation 5" onclick="equation5()"></input></br></br>
+                  </td>
+                </tr>
+                <tr>
+                <td></br>
+                <a>Equation 5 result is </a><input id="v" type="text" size="5" readonly="readonly"></input></br></br>
+                </td>
+                </tr>
+                <tr>
+                <td></br>
+                <a>Comment: </a></br><input id="comment5" type="text" size="60" readonly="readonly"></input></input></br></br>
+                </tr>
+                <tr></tr>
+                </td>
+                <td>
+                 
+                  <iframe src="indexsteps4.html" frameborder="0" scrolling="yes"  height="440" width="100%"></iframe>
+                  <p> Enter mass<input id="m7" type="text" size="8" value=""></imput></p>
+                  <p> Enter time<input id="t7" type="text"size="8" value="1"></input></p>
+                  <p>Enter Force breaking<input id="Fb7" type="text" size="8" value=""></input></p>
+                  <p> Enter initial speed<input id="v07" type="text" size="8" value=""></imput></p>
+                  <input id="count7" type="button" value="Calculate equation 7" onclick="equation7()"></input></br></br>
+                  </td>
+                  </tr>
+                  <tr>
+                  <td></br>
+                  <a>equation 7 result is </a><input id="x" type="text" size="5" readonly="readonly"></input></br></br>
+                </td>
+              </tr>
+              <tr>
+              <td></br>
+                <a>Comment: </a></br><input id="comment7" type="text" size="60" readonly="readonly"></input></input></br></br>
+                </tr>
+                <tr>
+                </td>
+                <td>
+                    
+                    <iframe src="indexsteps3.html" frameborder="0" scrolling="yes"  height="320" width="100%"></iframe>
+                    <p> Enter mass<input id="m8" type="text" size="8" value=""></imput></p>
+                    <p> Enter time<input id="t8" type="text"size="8" value="1"></input></p>
+                    <p>Enter Force breaking<input id="Fb8" type="text" size="8" value=""></input></p>
+                    <p> Enter initial speed<input id="v08" type="text" size="8" value=""></imput></p>
+                    <input id="count8" type="button" value="Calculate equation 8" onclick="equation8()"></input></br></br>
+                    </td>
+                    </tr>
+                    <tr>
+                    <td></br>
+                    <a>equation 8 result is </a><input id="t" type="text" size="5" readonly="readonly"></input></br></br>
+                  </td>
+                </tr>
+                <tr>
+                <td></br>
+                  <a>Comment: </a></br><input id="comment8" type="text" size="60" readonly="readonly"></input></input></br></br>
+                  </tr>
+                  <tr>
+                  </td>
+                  <td>
+                <table class="features-table">
+                  <h3> Equation 10 from problem 30 </h3>
+                  <form>
+                          <tr>
+                          <td>
+                          <p> Enter m  <input id="m10" type="number" size="8" value=""></input></p>
+                          <p> Enter v<sub>0</sub>  <input id="v010" type="text" size="8" value=""></input></p>
+                          <p> Enter S<sub>s</sub>  <input id="Ss10" type="text" size="8" value=""></input></p>
+                          <input id="count" type="button" value="Calculate the equation10" onclick="equation10()"></input></br></br>
+                          </td>
+                          </tr>
+                          <tr>
+                          <td></br>
+                          <a>Equation 10 result is Fb </a><input id="Fb10" type="text" size="5" readonly="readonly"></input></br></br>
+                          </td>
+                          </tr>
+                          <tr>
+                          <td></br>
+                          <a>Comment 10:  </a></br><input id="comment10" type="text" size="60" readonly="readonly"></input></input></br></br>
+                          </td>
+                        </tr>
+                          </table>
+                          </form>
+                          <p>Note: The kinetic energy of a car at the beginning of its brakins is qual to the work done by the braking force: W=Ek</p>
+                          <iframe src="indexsteps11.html" frameborder="0" scrolling="yes" height="400" width="700"></iframe>
+              
+                          <h4>On a horitzontal surface it holds that:</h4>
+                          <h3>Fb=f*N=f*m*g</h3> 
+                          <p>Fb..frictional braking force</p>
+                          <p>f..coeficient of static friction</p>
+                          <p>N..force wich the car acts upon the road</p>
+                          <p>m..the mass of the object</p>
+                          <p>g..the acceleration of gravity</p>
+                          <h4></h4>
+                          
+          
+                          <h3> Equation 11 from problem 30 </h3>
+                  <form>
+                          <table class="features-table">
+                          <tr>
+                          <td>
+                          <p> Enter f  <input id="f11" type="number" size="8" value=""></input></p>
+                          <p> Enter m  <input id="m11" type="text" size="8" value=""></input></p>
+                          <p> Enter g  <input id="g11" type="text" size="8" value="9.81"></input></p>
+                          <input id="count" type="button" value="Calculate the equation11" onclick="equation11()"></input></br></br>
+                          </td>
+                          </tr>
+                          <tr>
+                          <td></br>
+                          <a>Equation 11 result is Fb </a><input id="Fb11" type="text" size="5" readonly="readonly"></input></br></br>
+                          </td>
+                          </tr>
+                          <tr>
+                          <td></br>
+                          <a>Comment 11:  </a></br><input id="comment11" type="text" size="60" readonly="readonly"></input></input></br></br>
+                          </td>
+                          </tr>
+                          </table>
+                        </form>
+                        
+                        <iframe src="indexsteps12.html" frameborder="0" scrolling="yes" height="350" width="700"></iframe>
+                        <p>The coefficient of friction f will be the sabe in both scenarios</p>
+                        <p>We substitute for Fb from relation (10)</p>
+                        <h3> Equation 12 from problem 30 </h3>
+                  <form>
+                          <table class="features-table">
+                          <tr>
+                          <td>
+                          <p> Enter g  <input id="g12" type="text" size="8" value="9.81"></input></p>
+                          <p> Enter v<sub>0</sub>  <input id="v012" type="text" size="8" value=""></input></p>
+                          <p> Enter S<sub>s</sub>  <input id="Ss12" type="text" size="8" value=""></input></p>
+                          <input id="count" type="button" value="Calculate the equation12" onclick="equation12()"></input></br></br>
+                          </td>
+                          </tr>
+                          <tr>
+                          <td></br>
+          
+                          <a>Equation 12 result is F </a><input id="F12" type="text" size="5" readonly="readonly"></input></br></br>
+                          </td>
+                          </tr>
+                          <tr>
+                          <td></br>
+                          <a>Comment 12:  </a></br><input id="comment12" type="text" size="60" readonly="readonly"></input></input></br></br>
+                          </td>
+                          </tr>
+                          <tr>
+                          <td>
+                          </td>
+                          </tr>
+                          </table>
+                          </form>
+                          <h4>Forces acting upon a car moving uphill:</h4>
+                          <p>Fg.. gravitational force</p>
+                            <p>N<sub>1</sub>..normal force with which the road upon the car</p>
+                            <p>Fb<sub>1</sub>..braking force</p>
+                          <img src="carimatge.png">
+                          <h4>Equation of motion a car going uphill:</h4>
+                          <h3>Fb<sub>1</sub> + Fg + N<sub>1</sub> = m * a<sub>1</sub></h3>
+                          <p>We rewrite the equation using scalars and choose a coordinate system such that the x axis is parallel to the movement of the car. </p>
+                            <p>The y axis is perpendicular to the x axis. We split the gravitational force into two components in the directions of the axes:</p>
+            </body>
+                  <tr>
+                <td>
+                <p>Enter m<input id="m15" type="number" size="8" value=""></input> </p>
+                <p>Enter s<input id="s15" type="text" size="8" value=""></input></p>   
+                <p>Enter v<input id="v15" type="text" size="8" value=""></input></p>
+                <p>Enter &alpha;<input id="alpha" type="text" size="8" value=""></input></p>
+                <input id="count15" type="button" value="Calculate equation 15" onclick="equation15()"></input></br></br></p>
+                </td>
+                </tr> 
+                <tr>
+                <td></br>
+                <a>Equation 15 result is Fb1</a> <input id="Fb" type="text" size="5" readonly="readonly"></input></br></br>
+                <iframe src="indexsteps15.html" frameborder="0" scrolling="yes"  height="400" width="100%"></iframe>
+                <p>We express force N from relation (14) and substitute for it</p>
+                <p>We substitute for f from relation to (12)</p>
+              </td>
+                </tr>
+                <tr>
+                <td></br>
+                <a>Comment: </a></br><input id="comment15" type="text" size="60" readonly="readonly"></input></input></br></br>
+                </td>
+                </tr>
+                <tr>
+                <td>
+                
+                <p>Enter Fb<input id="Fb16" type="text" size="8" value=""></input></p> 
+                <p>Enter g<input id="g16" type="text" size="8" value=""></input></p>
+                <p>Enter m<input id="m16" type="text" size="8" value=""></input></p>
+                <p>Enter &alpha;<input id="alpha" type="text" size="8" value=""></input></p>
+                </td>
+                </tr>
+                </table>
+                </form>
+                <input id="count16" type="button" value="Calculate equation 16" onclick="equation16()"></input></br></br></p>
+              </td>
+              </tr> 
+              <tr>
+              <td></br>
+              <a>Equation 16 result is a1</a> <input id="a1" type="text" size="5" readonly="readonly"></input></br></br>
+              <iframe src="indexsteps16.html" frameborder="0" scrolling="yes"  height="280" width="100%"></iframe>
+              <p>We evaluate acceleration from equation (13)</p>
+            </td>
+              </tr>
+              <tr>
+              <td></br>
+              <a>Comment: </a></br><input id="comment16" type="text" size="60" readonly="readonly"></input></input></br></br>
+              </td>
+              </tr>
+              <tr>
+              <td>
+                  <tr>
+                      <td>
+                        <p>Enter m<input id="m18" type="number" size="8" value=""></input> </p>
+                        <p>Enter g<input id="g18" type="text" size="8" value=""></input></p> 
+                        <p>Enter Fb<input id="Fb18" type="text" size="8" value=""></input></p>
+                        <p>Enter t<input id="t18" type="text" size="8" value=""></input></p>
+                        <p>Enter &alpha;<input id="alpha" type="text" size="8" value=""></input></p>
+                      <input id="count" type="button" value="Calculate equation 18" onclick="equation18()"></input></br></br></p>
+                      </td>
+                      </tr> 
+                      <tr>
+                      <td></br>
+                      <a>Equation 18 result is v1</a> <input id="v1" type="text" size="5" readonly="readonly"></input></br></br>
+                      <iframe src="indexsteps18.html" frameborder="0" scrolling="yes"  height="280" width="100%"></iframe>
+                      <p>If we rewrite equation (17), we obtain the dependency of the velocity of the car velocity on time</p>
+                      <p>By integrating relation (18) we obtain the dependency of the coordinate time</p>
+                    </td>
+                      </tr>
+                      <tr>
+                      <td></br>
+                      <a>Comment: </a></br><input id="comment18" type="text" size="60" readonly="readonly"></input></input></br></br>
+                      </td>
+                      </tr>
+                      <tr>
+                      <td>
+                          <tr>
+                              <td>
+                              <p>Enter m<input id="m20" type="number" size="8" value=""></input> </p>
+                              <p>Enter t<input id="t20" type="text" size="8" value=""></input></p> 
+                              <p>Enter Fb<input id="Fb20" type="text" size="8" value=""></input></p>
+                              <p>Enter &alpha;<input id="alpha" type="text" size="8" value=""></input></p>
+                              <input id="count" type="button" value="Calculate equation 20" onclick="equation20()"></input></br></br></p>
+                              </td>
+                              </tr> 
+                              <tr>
+                              <td></br>      
+                              <a>Equation 20 result is x1</a> <input id="x1" type="text" size="5" readonly="readonly"></input></br></br>
+                              <iframe src="indexsteps20.html" frameborder="0" scrolling="yes"  height="320" width="100%"></iframe>
+                              <p>If we rewrite equation (19), we obtain the dependency of the dependency of the coordinate of the car on time</p>
+                              <p> We calculate the time of stopping t1 by substituting zero for velocity into relation (18)</p>
+                            </td>
+                              </tr>
+                              <tr>
+                              <td></br>
+                              <a>Comment: </a></br><input id="comment20" type="text" size="60" readonly="readonly"></input></input></br></br>
+                              </td>
+                              </tr>
+                              <tr>
+                              <td>
+                                  <tr>
+                                      <td>
+                                      <p>Enter Fb<input id="Fb21" type="number" size="8" value=""></input> </p>
+                                      <p>Enter m<input id="m21" type="text" size="8" value=""></input></p>
+                                      <p>Enter g<input id="g21" type="text" size="8" value=""></input></p>
+                                      <p>Enter v<input id="v21" type="number" size="8" value=""></input> </p>
+                                      <p>Enter &alpha;<input id="alpha" type="text" size="8" value=""></input></p>
+                                      <input id="count" type="button" value="Calculate equation 21" onclick="equation21()"></input></br></br></p>
+                                      </td>
+                                      </tr> 
+                                      <tr>
+                                      <td></br>
+                                      <a>Equation 21 result is Ts</a> <input id="Ts" type="text" size="5" readonly="readonly"></input></br></br>
+                                      <iframe src="indexsteps21.html" frameborder="0" scrolling="yes"  height="320" width="100%"></iframe>
+                                      <p>We substiyute the time t1 into relation (20) and calculate the total distance Ss travelled by the car</p>
+                                    </td>
+                                      </tr>
+                                      <tr>
+                                      <td></br>
+                                      <a>Comment: </a></br><input id="comment21" type="text" size="60" readonly="readonly"></input></input></br></br>
+                                      </td>
+                                      </tr>
+                                      <tr>
+                                      <td>
+                                      </td>
+                                      </tr>
+                                      <tr>
+                                          <td>
+                                          <p>Enter g<input id="g22" type="number" size="8" value=""></input> </p>
+                                          <p>Enter s<input id="s22" type="text" size="8" value=""></input></p> 
+                                          <p>Enter v<input id="v22" type="text" size="8" value=""></input></p>
+                                          <p>Enter &alpha;<input id="alpha" type="text" size="8" value=""></input></p>
+                                          <input id="count" type="button" value="Calculate equation 22" onclick="equation22()"></input></br></br></p>
+                                          </td>
+                                          </tr> 
+                                          <tr>
+                                          <td></br>
+                                            
+                                          <a>equation 22 result is Ss</a> <input id="Ss" type="text" size="5" readonly="readonly"></input></br></br>
+                                          <iframe src="indexsteps22.html" frameborder="0" scrolling="yes"  height="600" width="100%"></iframe>
+                                          <p>We substitute for Fb into relation (15)</p>
+                                        </td>
+                                          </tr>
+                                          <tr>
+                                          <td></br>
+                                          <a>Comment: </a></br><input id="comment22" type="text" size="60" readonly="readonly"></input></input></br></br>
+                                          </td>
+                                          </tr>
+                                          <p>Enter m<input id="m25" type="text" size="8" value=""></input></p>
+                                          <p>Enter g<input id="g25" type="text" size="8" value=""></input></p>
+                                          <p>Enter v<input id="v25" type="text" size="8" value=""></input></p>
+                                          <p>Enter Ss<input id="Ss25" type="text" size="8" value=""></input></p>
+                                          <input id="count25" type="button" value="Calculate equation 25" onclick="equation25()"></input></br></br>
+                                          </td>
+                                          </tr>
+                                          <tr>
+                                          <td></br>
+                                          <a>Equation 25 result is F<sub>b</sub> </a><input id="Fb2" type="text" size="5" readonly="readonly"></input></br></br>
+                                          <iframe src="indexsteps25.html" frameborder="0" scrolling="yes"  height="300" width="100%"></iframe>
+                                        </td>
+                                          </tr>
+                                          <tr>
+                                          <td>
+                                          <a>Comment25: </a></br><input id="comment25" type="text" size="60" readonly="readonly"></input></br></br>
+                                          </td>
+                                          </tr>
+                                          <tr>
+                                          <td>
+                                              <tr>
+                                                  <td>
+                                                      <p><iframe width="745" height="225" src="indexsteps26.html" frameborder="1" marginwidth="1" marginheight="1" scrolling="no"></iframe></a>.</p>
+                                                  <p>Enter Ts2<input id="ts26" type="text" size="8" value=""></input></p>
+                                                  <p>Enter Fb2<input id="Fb26" type="number" size="8" value=""></input></p>
+                                                  <p>Enter m<input id="m26" type="text" size="8" value=""></input></p>
+                                                  <p>Enter g<input id="g26" type="text" size="8" value="9.81"></input></p>
+                                                  <p>Enter &alpha;<input id="alpha26" type="text" size="8" value=""></input></p>
+                                                  <input id="count26" type="button" value="Calculate equation 26" onclick="equation26()"></input></br></br>
+                                                  </td>
+                                                  </tr>
+                                                  <tr>
+                                                  <td></br>
+                                                  <a>Equation 26 result is a2</a><input id="a26" type="text" size="8" readonly="readonly"></input></br></br>
+                                                  </td>
+                                                  </tr>
+                                                  <tr>
+                                                  <td></br>
+                                                  <a>Comment: </a></br><input id="comment26" type="text" size="60" readonly="readonly"></input></input></br></br>
+                                                  </td>
+                                                  </tr>
+                                                  <tr>
+                                                  <td>
+                                                  <p><iframe width="745" height="300" src="indexsteps31.html" frameborder="1" marginwidth="1" marginheight="1" scrolling="no"></iframe></a>.</p>
+                                                  <p>Enter Fb2<input id="Fb31" type="text" size="8" value=""></input></p>
+                                                  <p>Enter m<input id="m31" type="text" size="8" value=""></input></p>
+                                                  <p>Enter g<input id="g31" type="text" size="8" value="9.81"></input></p>
+                                                  <p>Enter &alpha;<input id="alpha31" type="text" size="8" value=""></input></p>
+                                                  <p>Enter Ts2<input id="ts31" type="text" size="8" value=""></input></p>
+                                                  <input id="count31" type="button" value="Calculate equation 31" onclick="equation31()"></input></br></br>
+                                                  </td>
+                                                  </tr>
+                                                  <tr>
+                                                  <td></br>
+                                                  <a>Equation 31 result is v0</a><input id="v31" type="text" size="8" readonly="readonly"></input></br></br>
+                                                  </td>
+                                                  </tr>
+                                                  <tr>
+                                                  <td></br>
+                                                  <a>Comment: </a></br><input id="comment31" type="text" size="60" readonly="readonly"></input></input></br></br>
+                                                  </td>
+                                                  </tr>
+                                                  <tr>
+                                                  <td>
+                                                  <p><iframe width="825" height="400" src="indexsteps32.html" frameborder="1" marginwidth="1" marginheight="1" scrolling="no"></iframe></a>.</p>
+                                                  <p>Enter Fb2<input id="Fb32" type="text" size="8" value=""></input></p>
+                                                  <p>Enter m<input id="m32" type="text" size="8" value=""></input></p>
+                                                  <p>Enter g<input id="g32" type="text" size="8" value="9.81"></input></p>
+                                                  <p>Enter v0<input id="v32" type="text" size="8" value=""></input></p>
+                                                  <p>Enter &alpha;<input id="alpha32" type="text" size="8" value=""></input></p>
+                                                  <input id="count32" type="button" value="Calculate equation 32" onclick="equation32()"></input></br></br>
+                                                  </td>
+                                                  </tr>
+                                                  <tr>
+                                                  <td></br>
+                                                  <a>Equation 32 result is ts2</a><input id="t32" type="text" size="8" readonly="readonly"></input></br></br>
+                                                  </td>
+                                                  </tr>
+                                                  <tr>
+                                                  <td></br>
+                                                  <a>Comment: </a></br><input id="comment32" type="text" size="60" readonly="readonly"></input></input></br></br>
+                                                  </td>
+                                                  </tr>
+                                                  <tr>
+                                                  <td>
+                                                   <p></p>
+                                                   <p><iframe width="745" height="400" src="indexsteps33.html" frameborder="1" marginwidth="1" marginheight="1" scrolling="no"></iframe></a>.</p>
+                                                   <p>Enter m<input id="m33" type="text" size="8" value=""></input></p>
+                                                   <input id="count33" type="button" value="Calculate equation 33" onclick="equation33()"></input></br></br>
+                                                     </td>
+                                                     </tr>
+                                                     <tr>
+                                                     <td></br>
+                                                     <a>Equation 33 result is ss2</a><input id="ss33" type="text" size="8" readonly="readonly"></input></br></br>
+                                                     </td>
+                                                     </tr>
+                                                     <tr>
+                                                     <td></br>
+                                                      
+                                                     <a>Comment: </a></br><input id="comment33" type="text" size="60" readonly="readonly"></input></input></br></br>
+                                                     </td>
+                                                     </tr>
+                                                     <tr>
+                                                     <td>
+                                          <input type="button" value="Clear" onclick="cancel()"></input>
+                                          </td>
+                                          </tr>
+              </table>
+              </form>
+</body>
+
+<!-- Mirrored from nilmarquez.neocities.org/brakingcar/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Feb 2023 06:55:15 GMT -->
+</html>
+
+
+

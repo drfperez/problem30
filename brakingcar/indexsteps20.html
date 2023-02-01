@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<!-- Mirrored from nilmarquez.neocities.org/brakingcar/indexsteps20 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Feb 2023 06:56:46 GMT -->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>MathJax v3 dynamic equations using CSS and javascript</title>
+  <link rel="stylesheet" type="text/css" href="stepsstyle.css">
+  <script src="../../polyfill.io/v3/polyfill.min1162.js?features=es6"></script>
+  <script src="stepsmathjax.js"></script>
+  <script id="MathJax-script" async src="../../cdn.jsdelivr.net/npm/mathjax%403/es5/tex-chtml.js"></script>
+
+  <script type="text/javascript">
+  //
+  //  Use a closure to hide the local variable
+  //
+  (function () {
+    var n = 1;
+    //
+    //  Make the current step be visible, and increment the step.
+    //  If it is the last step, disable the step button.
+    //  Once a step is taken, the reset button is made available.
+    //
+    window.ShowStep = function () {
+      document.getElementById("Step" + n++).style.visibility = "visible";
+      if (!document.getElementById("Step" + n)) {
+        document.getElementById("step").disabled = true;
+      }
+      document.getElementById("reset").disabled = false;
+    }
+    //
+    //  Enable the step button and disable the reset button.
+    //  Hide the steps.
+    //
+    window.ResetSteps = function () {
+      document.getElementById("step").disabled = false;
+      document.getElementById("reset").disabled = true;
+      var i = 1, step; n = 1;
+      while (step = document.getElementById("Step" + i)) {
+        step.style.visibility = "hidden";
+        i++
+      }
+    }
+  })();
+  </script>
+
+
+</head>
+<body>
+<h1>Equation 20</h1>
+
+<div id="frame">
+<p>
+Expand the following:
+\begin{align}
+  x_1
+    &= \cssId{Step1}{\frac{-F_b1}{2m}t^2-\frac{gt^2}{2}sin&alpha;+v_0 t}            \\[3px]
+    &\cssId{Step2}{{}  0= \frac{F_b1}{m}t_s1-gt_s1·sin&alpha;+v_0 }    \\[3px]
+    &\cssId{Step3}{{} = ..Equation20..}    \\[3px]
+\end{align}
+</p>
+
+<p>
+<input type="button" onclick="ShowStep()" value="Show Next Step" id="step" />
+<input type="button" onclick="ResetSteps()" value="Reset" id="reset"
+disabled="true" />
+</p>
+
+</div>
+
+</body>
+
+<!-- Mirrored from nilmarquez.neocities.org/brakingcar/indexsteps20 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Feb 2023 06:56:46 GMT -->
+</html>
